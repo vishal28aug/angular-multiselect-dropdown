@@ -1,6 +1,8 @@
 # MultiSelect-Dropdown
-Step 1: npm install
-ste 2: ng serve
+
+##Install dependency
+
+npm install
 
 ## Development server
 
