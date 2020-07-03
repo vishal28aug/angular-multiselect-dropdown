@@ -1,0 +1,104 @@
+.multiselect {
+    position: relative;
+    box-sizing: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 200px;
+    width: 100%;
+    border: 1px #dadada solid;
+    display: flex;
+    font-family: Roboto,sans-serif;
+    margin-bottom: 1px;;
+  }
+
+  .placeholder{
+    align-self: center;
+  }
+  
+  .selectedBox-item{
+    list-style: none;
+    padding: 4px 22px 4px 8px;
+    border-radius: 2px;
+    margin: 4px;
+    float: left;
+    position: relative;
+    background: #0079fe;
+    color: white;
+  }
+  
+  .selectedBox-label{
+    display: block;
+    float: left;
+  }
+
+  .selectedBox-remove{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 8px;
+  }
+  
+
+  .remove-all{
+    margin: 2px;
+}
+
+.angle-down{
+    margin: 2px;
+}
+
+.multiselect-menus{
+    padding: 4px 8px 4px 8px;
+    margin: 4px;
+    margin-left: auto;
+    margin-right: 0;
+    align-self: center;
+    display: flex;
+}
+  .selectBox select {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .multiselect-options{
+    position: relative;
+    box-sizing: inherit;
+    cursor: pointer;
+    overflow: auto;
+    max-height: 350px;
+    width: 100%;
+    font-family: Roboto,sans-serif;
+    font-size: 14px;
+    z-index: 99999;
+    box-shadow: 0 1px 5px #959595;
+  }
+  
+  #checkboxes {
+    display: block;
+    border: 1px #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+  }
+  
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+    color: white;
+  }
+
+  .search{
+    width: -webkit-fill-available;  
+    cursor: text !important;
+    border: 1px #dadada solid;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .item-list{
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+  }

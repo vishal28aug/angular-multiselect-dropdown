@@ -1,0 +1,29 @@
+<div class="multiselect" (click)="showList()" #multiSelectDropdown>
+    <div *ngIf="selectedOptions.length == 0" class="placeholder">Select {{optionSettings.placeholder}}</div>
+    <div *ngIf="selectedOptions.length > 0">
+      <div *ngFor="let selectedOption of selectedOptions" class="selectedBox-item">
+        <span class="selectedBox-lable">{{selectedOption}}</span>
+        <span (click)="removeSingleItem($event, selectedOption)" title="remove" class="selectedBox-remove">
+          <i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="multiselect-menus">
+      <i *ngIf="selectedOptions.length > 0" (click)="removeAllItem($event)" title="remove all" class="fa fa-times remove-all"
+        aria-hidden="true"></i>
+      <i class="angle-down" [ngClass]="expanded ?'fa fa-chevron-up':'fa fa-chevron-down'" title="open" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div *ngIf="expanded" class="multiselect-options" #multiSelectDropdownOptions>
+    <div id="checkboxes" *ngIf="options.length > 0">
+      <label for="selectAll"  class="item-list" *ngIf="selectedOptions.length != options.length">
+        <input type="checkbox"  id="selectAll" (change)="onSelectAllOptions();" />Select All</label>
+  
+        <label for="unselectAll"  class="item-list" *ngIf="selectedOptions.length === options.length">
+          <input type="checkbox" [checked]="selectedOptions.length === options.length" id="unselectAll" (change)="removeAllItem($event);" />UnSelect All</label>
+  
+          <input type="text" class="item-list search" id="searchItem" (keyup)="onSearch($event.target.value)" placeholder="Search"/>
+  
+      <label for="{{i}}" *ngFor="let option of options; let i = index;" class="item-list">
+        <input type="checkbox"  [checked]="isSelected(option)" [value]="option" [id]="i" (change)="onItemChange($event);" />{{option}}</label>
+    </div>
+  </div>

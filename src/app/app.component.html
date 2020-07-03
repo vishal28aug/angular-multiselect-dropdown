@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+    <app-multi-select-dropdown
+    [data] = 'data'
+    [settings] = 'settings'
+    formControlName="options"
+    (onSelect)="onItemSelect($event)"
+    (onDeSelect)="OnItemDeSelect($event)" 
+    (onSelectAll)="onSelectAll($event)" 
+    (onDeSelectAll)="onDeSelectAll($event)"
+    ></app-multi-select-dropdown>
+    </form>
+    
+    
