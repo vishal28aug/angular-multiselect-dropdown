@@ -1,6 +1,6 @@
 # MultiSelect-Dropdown
 
-##Install dependency
+## Install dependency
 
 npm install
 
